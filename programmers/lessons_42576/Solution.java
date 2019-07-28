@@ -2,26 +2,11 @@ package lessons_42576;
 
 import java.util.Arrays;
 
-/**
- * 
- * @author Choi
- * url : https://programmers.co.kr/learn/courses/30/lessons/42576?language=java
- * 
- */
+// https://programmers.co.kr/learn/courses/30/lessons/42576
 
 public class Solution{
 
     public String solution(String[] participant, String[] completion) {
-    	
-//    	정확성 50 효율성0
-//    	ArrayList<String> list = new ArrayList<>(Arrays.asList(participant));
-//    	
-//    	for (String com : completion) {
-//    		if(list.contains(com)) {
-//    			list.remove(com);
-//    		};
-//		}
-//        return list.get(0);
     	
     	Arrays.sort(participant);
     	Arrays.sort(completion);
