@@ -1,17 +1,27 @@
 package beakjoon_1436;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NumberFormatException, IOException {
 
-		final String DOOMS_NUM = "666";
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int n = Integer.parseInt(br.readLine());
+		StringBuilder sb = new StringBuilder();
 		
-		Scanner scanner = new Scanner(System.in);
-		int series = scanner.nextInt();
-		System.out.println(Integer.parseInt(series-1 + DOOMS_NUM));
-		scanner.close();
+		int value = 666;
+		
+		for (int i = 1; i < n; i++) {
+			while (sb.indexOf("666") < 0) {
+				sb.setLength(0);
+				sb.append(++value);
+			}
+			sb.setLength(0);
+		}
+		System.out.println(value);
 	}
 
 }
